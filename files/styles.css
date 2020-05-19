@@ -1,5 +1,20 @@
 @import url("https://rsms.me/inter/inter.css");
 
+:root {
+  --c-dark-blue-grey: #191847;
+  --c-dark-grey-blue: #2F3676;
+  --c-greyish-brown: #555;
+  --c-light-sky-blue: #DDE3E9;
+  --c-light-blue-grey: #C5CFD6;
+  --c-pine-green: #071723;
+  --c-rebecca-purple: #663399;
+  --c-very-light-pink: #F2F2F2;
+  --c-white: #FFF;
+  --space: 16px;
+  --space-md: 32px;
+  --space-sm: 8px;
+}
+
 html {
   font-family: "Inter", sans-serif;
 }
@@ -18,29 +33,16 @@ html {
 
 body {
   background: rebeccapurple;
-  color: #071723;
+  color: var(--c-pine-green);
 }
 
 .box {
-  background-color: #f2f2f2;
+  background-color: var(--c-very-light-pink);
   border-radius: 8px;
   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
-  margin: 20px auto;
+  margin: var(--space-md) auto;
   overflow: hidden;
   width: 550px;
-}
-
-.space {
-  margin-bottom: 16px;
-}
-
-.space-md {
-  margin-bottom: 32px;
-}
-
-.label {
-  font-size: 18px;
-  font-weight: 600;
 }
 
 .header {
@@ -52,7 +54,7 @@ body {
 }
 
 .header .title {
-  color: #fff;
+  color: var(--c-white);
   font-size: 23px;
   font-weight: 300;
 }
@@ -63,58 +65,135 @@ body {
   line-height: 1.46;
 }
 
+.legend {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: var(--space);
+  margin-top: var(--space-md);
+}
+
+.fieldset {
+  border: none;
+  padding: 0 var(--space-md);
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox + label {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  position: relative;
+}
+
+.checkbox + label:before {
+  background: var(--c-dark-grey-blue);
+  border-radius: 4px;
+  content: '';
+  display: inline-block;
+  height: 24px;
+  margin-bottom: var(--space-sm);
+  margin-right: var(--space-sm);
+  vertical-align: middle;
+  width: 24px;
+}
+
+.checkbox:hover + label:before {
+  background: var(--c-dark-blue-grey);
+}
+
+.checkbox:checked + label:before {
+  background: var(--c-dark-grey-blue);
+}
+
+.checkbox:disabled + label {
+  cursor: auto;
+}
+
+.checkbox:disabled + label:before {
+  background: var(--c-light-blue-grey);
+}
+
+.checkbox:checked + label:after {
+  background: var(--c-very-light-pink);
+  content: '';
+  height: 3px; 
+  left: 6px;
+  position: absolute;
+  top: 5px;
+  width: 3px;
+  box-shadow: 2px 0 0 var(--c-very-light-pink), 4px 0 0 var(--c-very-light-pink), 4px -2px 0 var(--c-very-light-pink), 4px -4px 0 var(--c-very-light-pink), 4px -6px 0 var(--c-very-light-pink), 4px -8px 0 var(--c-very-light-pink);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.counter svg {
+  fill: var(--c-dark-grey-blue);
+}
+
+.counter {
+  display: flex;
+}
+
+.counter input {
+  background: var(--c-light-sky-blue);
+  border: 1px solid var(--c-dark-grey-blue);
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  height: 42px;
+  margin: 0 var(--space-sm);
+  text-align: center;
+  width: 60px;
+}
+
 .form textarea {
-  background: #dde3e9;
-  border: 1px solid #2f3676;
-  border-radius: 8px;
-  color: #071723;
+  background: var(--c-light-sky-blue);
+  border: 1px solid var(--c-dark-grey-blue);
+  border-radius: 4px;
+  color: var(--c-pine-green);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   height: 140px;
   padding: 16px;
   resize: none;
   width: 100%;
-  font-size: 14px;
-}
-
-.fieldset {
-  padding: 0 32px;
-}
-
-.counter svg {
-  fill: #2f3676;
-}
-
-.counter input {
-  background: #dde3e9;
-  border: 1px solid #2f3676;
-  border-radius: 7px;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 8px;
-  width: 60px;
 }
 
 .footer {
-  padding: 32px;
-  background: #dde3e9;
+  background: var(--c-light-sky-blue);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-md);
+  padding: 32px;
+}
+
+.footer .sucesso {
+  color: #00C57C;
+  font-weight: bold;
+  opacity: 0;
 }
 
 .footer button {
   appearance: none;
-  background: #2f3676;
-  border: 0;
-  border-radius: 8px;
-  color: #fff;
-  padding: 10px;
+  background: var(--c-dark-grey-blue);
+  border: 2px solid var(--c-dark-grey-blue);
+  border-radius: 4px;
+  box-sizing: content-box;
+  color: var(--c-white);
   font-size: 18px;
-  text-transform: uppercase;
   font-weight: bold;
-  padding: 8px 32px;
+  padding: var(--space-sm) var(--space-md);
+  text-transform: uppercase;
 }
 
 .footer button:focus,
 .footer button:hover {
-  border: 2px solid #2f3676;
-  background: #191847;
+  border-color: var(--c-dark-grey-blue);
+  background: var(--c-dark-blue-grey);
 }

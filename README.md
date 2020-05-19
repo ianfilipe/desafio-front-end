@@ -31,9 +31,9 @@ Você deve utilizar esse código, ~que tá uma beleza~, para iniciar o seu teste
 [Aqui](https://codesandbox.io/s/frontend-dchtk)
 
 ## Primeira parte: colocando ordem na casa.
-- [ ] Precisamos deixar o HTML semântico, use as tags HTML que correspondem corretamente aos cenários aplicados.
-- [ ] Fique a vontade para mudar a estrutura caso ache necessário, mas precisa ser fiel ao layout.
-- [ ] Na tag `<html>`, está faltando um parâmetro que é obrigatório. Você consegue identificar e aplicar?
+- [x] Precisamos deixar o HTML semântico, use as tags HTML que correspondem corretamente aos cenários aplicados.
+- [x] Fique a vontade para mudar a estrutura caso ache necessário, mas precisa ser fiel ao layout.
+- [x] Na tag `<html>`, está faltando um parâmetro que é obrigatório. Você consegue identificar e aplicar?
 
 ## Segunda parte: tornando a casa acessível.
 - [ ] Vixe!😱 Parece que o HTML não está totalmente acessível. Você consegue melhorar a acessibilidade?
