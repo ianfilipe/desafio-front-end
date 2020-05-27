@@ -36,10 +36,10 @@ Você deve utilizar esse código, ~que tá uma beleza~, para iniciar o seu teste
 - [x] Na tag `<html>`, está faltando um parâmetro que é obrigatório. Você consegue identificar e aplicar?
 
 ## Segunda parte: tornando a casa acessível.
-- [ ] Vixe!😱 Parece que o HTML não está totalmente acessível. Você consegue melhorar a acessibilidade?
+- [x] Vixe!😱 Parece que o HTML não está totalmente acessível. Você consegue melhorar a acessibilidade?
 
 ## Terceira parte: o contador de stickers.
-- [ ] Precisamos fazer o componente de contador funcionar para que o usuário possa definir a quantidade de stickers que deseja comprar. 
+- [x] Precisamos fazer o componente de contador funcionar para que o usuário possa definir a quantidade de stickers que deseja comprar. 
 
 ![](contador.gif)
 

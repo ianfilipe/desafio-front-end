@@ -151,6 +151,12 @@ body {
   width: 60px;
 }
 
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
 .form textarea {
   background: var(--c-light-sky-blue);
   border: 1px solid var(--c-dark-grey-blue);
