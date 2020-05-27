@@ -1,17 +1,15 @@
-stickercounter = document.querySelector('#stickercounter')
-addsticker = document.querySelector('#addsticker')
-removesticker = document.querySelector('#removesticker')
+stickerCounterElement = document.querySelector('#stickercounter')
+addStickerElement = document.querySelector('#addsticker')
+removeStickerElement = document.querySelector('#removesticker')
 
-removesticker.addEventListener('click', removeSticker)
-addsticker.addEventListener('click', addSticker)
+stickerCounterElement.valueAsNumber = 0
 
-stickercounter.valueAsNumber = 0
+addStickerElement.addEventListener('click', function(){
+    stickerCounterElement.valueAsNumber++
+})
 
-function addSticker() {
+removeStickerElement.addEventListener('click', function(){
+    stickerCounterElement.valueAsNumber--
+    if ( stickercounter.valueAsNumber == '-1' )
     stickercounter.valueAsNumber += 1
-}
-
-function removeSticker() {
-    stickercounter.valueAsNumber -= 1
-    if ( stickercounter.valueAsNumber == '-1' ) stickercounter.valueAsNumber += 1
-}
+})
