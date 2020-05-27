@@ -9,7 +9,7 @@ addStickerElement.addEventListener('click', function(){
 })
 
 removeStickerElement.addEventListener('click', function(){
-    stickerCounterElement.valueAsNumber--
-    if ( stickercounter.valueAsNumber == '-1' )
-    stickercounter.valueAsNumber += 1
+    if (stickerCounterElement.valueAsNumber >- 0 ) {
+        stickerCounterElement.valueAsNumber--
+    }
 })
